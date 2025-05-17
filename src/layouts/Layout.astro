@@ -1,0 +1,106 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Modelado 3D especializado en plantas de tratamiento de aguas servidas - Visualización y planificación profesional"
+    />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-white text-gray-900">
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-sm border-b">
+      <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-20">
+          <a
+            href="/"
+            class="text-xl font-bold text-gray-900 flex items-center gap-3"
+          >
+            <img src="/logo.svg" alt="Logo" class="w-10 h-10" />
+            WaterModel 3D
+          </a>
+          <div class="hidden md:flex space-x-8">
+            <div class="relative group">
+              <a
+                href="#solutions"
+                class="text-gray-600 hover:text-blue-600 transition-colors py-8"
+              >
+                Soluciones
+              </a>
+              <div
+                class="absolute hidden group-hover:block w-48 bg-white shadow-lg rounded-lg mt-2"
+              >
+                <a
+                  href="#treatment-plants"
+                  class="block px-4 py-2 hover:bg-gray-50"
+                  >Plantas de Tratamiento</a
+                >
+                <a
+                  href="#water-systems"
+                  class="block px-4 py-2 hover:bg-gray-50">Sistemas de Agua</a
+                >
+                <a
+                  href="#infrastructure"
+                  class="block px-4 py-2 hover:bg-gray-50">Infraestructura</a
+                >
+              </div>
+            </div>
+            <a
+              href="#services"
+              class="text-gray-600 hover:text-blue-600 transition-colors"
+              >Servicios</a
+            >
+            <a
+              href="#projects"
+              class="text-gray-600 hover:text-blue-600 transition-colors"
+              >Proyectos</a
+            >
+            <a
+              href="#about"
+              class="text-gray-600 hover:text-blue-600 transition-colors"
+              >Nosotros</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-600 hover:text-blue-600 transition-colors"
+              >Contacto</a
+            >
+          </div>
+          <div class="flex items-center gap-4">
+            <a
+              href="#contact"
+              class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors font-medium"
+            >
+              Solicitar Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <slot />
+  </body>
+</html>
+
+<style>
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>

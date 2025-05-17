@@ -1,0 +1,50 @@
+---
+import FeatureCard from "./FeatureCard.astro";
+---
+
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        Soluciones Completas para Plantas de Tratamiento
+      </h2>
+      <p class="text-xl text-gray-600">
+        Ofrecemos servicios especializados en modelado 3D para optimizar el
+        diseño y la operación de plantas de tratamiento de aguas servidas.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <FeatureCard
+        title="Diseño y Modelado BIM"
+        description="Creamos modelos BIM detallados que integran todos los componentes de su planta de tratamiento para una mejor planificación y coordinación."
+        icon="🏗️"
+      />
+      <FeatureCard
+        title="Simulación de Procesos"
+        description="Visualice el funcionamiento de su planta con simulaciones 3D de los procesos de tratamiento de agua para optimizar la eficiencia."
+        icon="💧"
+      />
+      <FeatureCard
+        title="Documentación Técnica"
+        description="Generamos documentación técnica precisa y detallada directamente desde los modelos 3D para facilitar la construcción y mantenimiento."
+        icon="📋"
+      />
+      <FeatureCard
+        title="Detección de Interferencias"
+        description="Identificamos y resolvemos conflictos entre sistemas antes de la construcción, ahorrando tiempo y costos."
+        icon="🔍"
+      />
+      <FeatureCard
+        title="Visualización Realista"
+        description="Creamos renders fotorrealistas y recorridos virtuales para una mejor comprensión del proyecto."
+        icon="🎨"
+      />
+      <FeatureCard
+        title="Soporte en Construcción"
+        description="Proporcionamos soporte técnico durante la fase de construcción con modelos 3D actualizados y coordinación in situ."
+        icon="👷"
+      />
+    </div>
+  </div>
+</section>

@@ -1,0 +1,236 @@
+---
+// ImageSlider.astro
+---
+
+<div
+  class="relative z-10 rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl w-full aspect-[4/3] sm:aspect-[16/8] md:aspect-[16/7.9]"
+>
+  <div class="swiper hero-slider h-full">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="image-zoom-wrapper">
+          <img
+            src="/tratamiento1.jpeg"
+            alt="Planta de tratamiento de aguas residuales"
+            class="w-full h-full object-cover"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"
+          >
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="image-zoom-wrapper">
+          <img
+            src="/tratamiento2.jpg"
+            alt="Sistema de tratamiento de aguas"
+            class="w-full h-full object-cover"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"
+          >
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="image-zoom-wrapper">
+          <img
+            src="/tratamiento3.jpg"
+            alt="Sistema de tratamiento de aguas avanzado"
+            class="w-full h-full object-cover"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"
+          >
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="image-zoom-wrapper">
+          <img
+            src="/tratamiento4.jpg"
+            alt="Sistema de tratamiento de aguas avanzado"
+            class="w-full h-full object-cover"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"
+          >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Navegación -->
+    <div class="swiper-button-next !text-white hidden sm:flex"></div>
+    <div class="swiper-button-prev !text-white hidden sm:flex"></div>
+    <!-- Paginación -->
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+
+<style is:global>
+  .hero-slider {
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-slider .swiper-slide {
+    height: 100%;
+  }
+  .hero-slider .swiper-button-next,
+  .hero-slider .swiper-button-prev {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 1.5rem;
+    border-radius: 50%;
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+    transition: all 0.3s ease;
+    z-index: 30;
+    cursor: pointer;
+    position: absolute;
+    margin-top: 0;
+    transform: translateY(-50%);
+  }
+
+  .hero-slider .swiper-button-next {
+    right: 20px; /* Ajustamos la posición */
+  }
+
+  .hero-slider .swiper-button-prev {
+    left: 20px; /* Ajustamos la posición */
+  }
+
+  .hero-slider .swiper-button-next:hover,
+  .hero-slider .swiper-button-prev:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+  }
+
+  .hero-slider .swiper-button-next::after,
+  .hero-slider .swiper-button-prev::after {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+
+  .hero-slider .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: white;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+  }
+
+  .hero-slider .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: white;
+    transform: scale(1.2);
+  }
+
+  .image-zoom-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .image-zoom-wrapper img {
+    transition: transform 8s ease-in-out;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+  }
+
+  .swiper-slide-active .image-zoom-wrapper img {
+    transform: scale(1.3);
+  }
+
+  .swiper-slide-next .image-zoom-wrapper img,
+  .swiper-slide-prev .image-zoom-wrapper img {
+    transform: scale(1);
+  }
+
+  .swiper-pagination {
+    z-index: 30; /* Aumentamos el z-index de la paginación también */
+    position: relative;
+  }
+
+  /* Aseguramos que los controles sean clickeables */
+  .swiper-button-next,
+  .swiper-button-prev,
+  .swiper-pagination {
+    pointer-events: auto !important;
+  }
+
+  /* El contenedor del slider no debe bloquear los clicks */
+  .hero-slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  .hero-slider .swiper-wrapper {
+    pointer-events: auto;
+  }
+
+  /* Mejoras visuales adicionales */
+  .hero-slider .swiper-slide {
+    position: relative;
+  }
+</style>
+
+<script>
+  import Swiper from "swiper";
+  import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
+  import "swiper/css";
+  import "swiper/css/navigation";
+  import "swiper/css/pagination";
+  import "swiper/css/effect-fade";
+  new Swiper(".hero-slider", {
+    modules: [Navigation, Pagination, Autoplay, EffectFade],
+    loop: true,
+    speed: 1500,
+    autoplay: {
+      delay: 8000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true, // Pausa cuando el mouse está sobre el slider
+    },
+    allowTouchMove: true, // Permite la interacción táctil
+    watchOverflow: true, // Mejora la detección de eventos
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    effect: "fade",
+    fadeEffect: {
+      crossFade: true,
+    },
+    on: {
+      slideChangeTransitionStart: function (swiper) {
+        const activeSlide = swiper.slides[swiper.activeIndex];
+        const prevSlides = document.querySelectorAll(".swiper-slide-prev img");
+        const nextSlides = document.querySelectorAll(".swiper-slide-next img");
+
+        prevSlides.forEach(
+          (img) => ((img as HTMLImageElement).style.transform = "scale(1)")
+        );
+        nextSlides.forEach(
+          (img) => ((img as HTMLImageElement).style.transform = "scale(1)")
+        );
+
+        setTimeout(() => {
+          const activeImg = activeSlide.querySelector("img");
+          if (activeImg) {
+            activeImg.style.transform = "scale(1.3)"; // Aumentamos el zoom
+          }
+        }, 50);
+      },
+    },
+  });
+</script>

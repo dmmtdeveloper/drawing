@@ -1,0 +1,225 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import Features from "../components/Features.astro";
+import ContactForm from "../components/ContactForm.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="WaterModel 3D - Modelado 3D de Plantas de Tratamiento">
+  <main>
+    <Hero />
+    <Features />
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Proyectos Destacados
+          </h2>
+          <p class="text-xl text-gray-600">
+            Explore nuestros últimos proyectos de modelado 3D en plantas de
+            tratamiento
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="group relative overflow-hidden rounded-xl shadow-lg">
+            <img
+              src="/images/project1.webp"
+              alt="Planta de tratamiento modelo 3D"
+              class="w-full aspect-video object-cover transform group-hover:scale-105 transition-transform duration-300"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end"
+            >
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-white mb-2">
+                  Planta de Tratamiento Municipal
+                </h3>
+                <p class="text-gray-200">
+                  Modelado BIM completo y simulación de procesos
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="group relative overflow-hidden rounded-xl shadow-lg">
+            <img
+              src="/images/project2.webp"
+              alt="Sistema de tuberías 3D"
+              class="w-full aspect-video object-cover transform group-hover:scale-105 transition-transform duration-300"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end"
+            >
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-white mb-2">
+                  Sistema de Tuberías Industrial
+                </h3>
+                <p class="text-gray-200">
+                  Detección de interferencias y optimización
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="group relative overflow-hidden rounded-xl shadow-lg">
+            <img
+              src="/images/project3.webp"
+              alt="Visualización 3D de planta"
+              class="w-full aspect-video object-cover transform group-hover:scale-105 transition-transform duration-300"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end"
+            >
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-white mb-2">
+                  Centro de Control Automatizado
+                </h3>
+                <p class="text-gray-200">
+                  Visualización y documentación técnica
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Nuestro Proceso
+          </h2>
+          <p class="text-xl text-gray-600">
+            Un enfoque sistemático para entregar resultados excepcionales
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <span class="text-2xl">1</span>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              Análisis Inicial
+            </h3>
+            <p class="text-gray-600">
+              Evaluación detallada de requisitos y especificaciones del proyecto
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <span class="text-2xl">2</span>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              Modelado 3D
+            </h3>
+            <p class="text-gray-600">
+              Creación de modelos BIM precisos y detallados
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <span class="text-2xl">3</span>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              Optimización
+            </h3>
+            <p class="text-gray-600">
+              Detección de interferencias y mejora de procesos
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <span class="text-2xl">4</span>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Entrega</h3>
+            <p class="text-gray-600">
+              Documentación completa y soporte técnico
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Comience su Proyecto
+          </h2>
+          <p class="text-xl text-gray-600">
+            Póngase en contacto con nosotros para discutir sus necesidades de
+            modelado 3D
+          </p>
+        </div>
+        <ContactForm />
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Preguntas Frecuentes
+          </h2>
+          <p class="text-xl text-gray-600">
+            Respuestas a las preguntas más comunes sobre nuestros servicios
+          </p>
+        </div>
+
+        <div class="max-w-3xl mx-auto divide-y divide-gray-200">
+          <div class="py-6">
+            <h3 class="text-lg font-semibold text-gray-900">
+              ¿Qué software utilizan para el modelado 3D?
+            </h3>
+            <p class="mt-2 text-gray-600">
+              Utilizamos software BIM de última generación, incluyendo Revit,
+              AutoCAD Plant 3D y otros programas especializados para garantizar
+              la máxima precisión y compatibilidad.
+            </p>
+          </div>
+          <div class="py-6">
+            <h3 class="text-lg font-semibold text-gray-900">
+              ¿Cuánto tiempo toma completar un proyecto?
+            </h3>
+            <p class="mt-2 text-gray-600">
+              El tiempo varía según la complejidad del proyecto. Típicamente, un
+              proyecto mediano puede tomar entre 4-8 semanas desde el inicio
+              hasta la entrega final.
+            </p>
+          </div>
+          <div class="py-6">
+            <h3 class="text-lg font-semibold text-gray-900">
+              ¿Ofrecen soporte post-entrega?
+            </h3>
+            <p class="mt-2 text-gray-600">
+              Sí, proporcionamos soporte técnico completo después de la entrega,
+              incluyendo actualizaciones del modelo y asistencia en la
+              implementación.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
