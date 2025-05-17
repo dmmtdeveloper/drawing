@@ -2,7 +2,7 @@
 // ImageSlider.astro
 ---
 
-<div
+<section
   class="relative z-10 rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl w-full aspect-[4/3] sm:aspect-[16/8] md:aspect-[16/7.9]"
 >
   <div class="swiper hero-slider h-full">
@@ -10,20 +10,7 @@
       <div class="swiper-slide">
         <div class="image-zoom-wrapper">
           <img
-            src="/tratamiento1.jpeg"
-            alt="Planta de tratamiento de aguas residuales"
-            class="w-full h-full object-cover"
-          />
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"
-          >
-          </div>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="image-zoom-wrapper">
-          <img
-            src="/tratamiento2.jpg"
+            src="/neutralizacion.jpg"
             alt="Sistema de tratamiento de aguas"
             class="w-full h-full object-cover"
           />
@@ -36,8 +23,8 @@
       <div class="swiper-slide">
         <div class="image-zoom-wrapper">
           <img
-            src="/tratamiento3.jpg"
-            alt="Sistema de tratamiento de aguas avanzado"
+            src="/manifold.jpg"
+            alt="Sistema de tratamiento de aguas"
             class="w-full h-full object-cover"
           />
           <div
@@ -49,8 +36,21 @@
       <div class="swiper-slide">
         <div class="image-zoom-wrapper">
           <img
-            src="/tratamiento4.jpg"
-            alt="Sistema de tratamiento de aguas avanzado"
+            src="/pampaconcordia.jpg"
+            alt="Sistema de tratamiento de aguas"
+            class="w-full h-full object-cover"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"
+          >
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="image-zoom-wrapper">
+          <img
+            src="/public/riles.jpg"
+            alt="Planta de tratamiento de aguas residuales"
             class="w-full h-full object-cover"
           />
           <div
@@ -61,12 +61,12 @@
       </div>
     </div>
     <!-- Navegación -->
-    <div class="swiper-button-next !text-white hidden sm:flex"></div>
-    <div class="swiper-button-prev !text-white hidden sm:flex"></div>
+    <!-- <div class="swiper-button-next !text-white hidden sm:flex"></div>
+    <div class="swiper-button-prev !text-white hidden sm:flex"></div> -->
     <!-- Paginación -->
     <div class="swiper-pagination"></div>
   </div>
-</div>
+</section>
 
 <style is:global>
   .hero-slider {

@@ -24,21 +24,20 @@ const { title } = Astro.props;
     />
   </head>
   <body class="bg-white text-gray-900">
-    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-sm border-b">
+    <nav class="fixed w-full z-50 transition-all duration-300">
       <div class="container mx-auto px-4">
         <div class="flex items-center justify-between h-20">
           <a
             href="/"
-            class="text-xl font-bold text-gray-900 flex items-center gap-3"
+            class="text-xl font-bold text-white flex items-center gap-3 transition-colors duration-300"
           >
-            <img src="/logo.svg" alt="Logo" class="w-10 h-10" />
             WaterModel 3D
           </a>
           <div class="hidden md:flex space-x-8">
             <div class="relative group">
               <a
                 href="#solutions"
-                class="text-gray-600 hover:text-blue-600 transition-colors py-8"
+                class="text-white hover:text-blue-400 transition-colors py-8"
               >
                 Soluciones
               </a>
@@ -103,4 +102,39 @@ const { title } = Astro.props;
     width: 100%;
     height: 100%;
   }
+
+  nav.scrolled {
+    @apply bg-white/90 backdrop-blur-sm border-b;
+  }
 </style>
+
+<script>
+  // Detectar el scroll y añadir/remover clases al nav
+  const nav = document.querySelector("nav");
+  const navLinks = document.querySelectorAll("nav a:not(.bg-blue-600)");
+  const navLogo = document.querySelector("nav a:first-child");
+
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      nav?.classList.add("scrolled");
+      navLinks.forEach((link) => {
+        link.classList.remove("text-white", "hover:text-blue-400");
+        link.classList.add("text-gray-600", "hover:text-blue-600");
+      });
+      navLogo?.classList.remove("text-white");
+      navLogo?.classList.add("text-gray-900");
+    } else {
+      nav?.classList.remove("scrolled");
+      navLinks.forEach((link) => {
+        link.classList.remove("text-gray-600", "hover:text-blue-600");
+        link.classList.add("text-white", "hover:text-blue-400");
+      });
+      navLogo?.classList.remove("text-gray-900");
+      navLogo?.classList.add("text-white");
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  // Verificar el estado inicial
+  handleScroll();
+</script>
