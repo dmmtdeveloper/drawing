@@ -1,17 +1,20 @@
 ---
 import FeatureCard from "./FeatureCard.astro";
+import { BlockAnimation } from "./ScrollAnimation";
 ---
 
 <section class="py-20 bg-gray-50">
   <div class="container mx-auto px-4">
     <div class="text-center max-w-3xl mx-auto mb-16">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-        Soluciones Completas para Plantas de Tratamiento
-      </h2>
-      <p class="text-xl text-gray-600">
-        Ofrecemos servicios especializados en modelado 3D para optimizar el
-        diseño y la operación de plantas de tratamiento de aguas servidas.
-      </p>
+      <BlockAnimation client:load>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Soluciones Completas para Plantas de Tratamiento
+        </h2>
+        <p class="text-xl text-gray-600">
+          Ofrecemos servicios especializados en modelado 3D para optimizar el
+          diseño y la operación de plantas de tratamiento de aguas servidas.
+        </p>
+      </BlockAnimation>
     </div>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

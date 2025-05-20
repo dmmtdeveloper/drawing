@@ -6,9 +6,8 @@ export default {
       colors: {
         primary: '#7C3AED',
         secondary: '#4F46E5',
-      },
-      fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+      },      fontFamily: {
+        sans: ['Sora', 'system-ui', 'sans-serif'],
       },
     },
   },
