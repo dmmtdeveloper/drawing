@@ -1,9 +1,7 @@
 ---
 import Button from "./Button.astro";
 import ImageSlider from "./ImageSlider.astro";
-
 ---
-
 
 <section
   class="relative min-h-[100svh] flex items-center justify-center bg-gray-900 overflow-hidden"
@@ -12,43 +10,41 @@ import ImageSlider from "./ImageSlider.astro";
     <ImageSlider />
   </div>
 
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-      <div class="max-w-4xl mx-auto text-center text-white p-4">
-        <h1
-          class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 opacity-95 leading-tight"
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+    <div class="max-w-4xl mx-auto text-center text-white p-4">
+      <h1
+        class="text-6xl sm:text-6xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 opacity-95 leading-tight"
+      >
+        Ingeniería
+        <span
+          class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400"
         >
-          Ingeniería
-          <span
-            class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400"
-          >
-            en 3D
-          </span>
-        </h1>
+          en 3D
+        </span>
+      </h1>
 
-        <p class="text-xl md:text-2xl mb-8 text-gray-200 opacity-90">
-          Transformando la Ingeniería con tecnología de
-          punta
-        </p>
-
-        <div class="flex gap-4 justify-center">
-          <a
-            href="#contact"
-            class="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105"
-          >
-            Contáctanos
-          </a>
-          <a
-            href="#projects"
-            class="px-8 py-3 bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 rounded-lg text-lg font-semibold transition-all duration-300"
-          >
-            Ver Proyectos
-          </a>
-        </div>
+      <p class="text-xl md:text-2xl mb-8 text-gray-200 opacity-90">
+        Transformando la Ingeniería con tecnología de punta
+      </p>
+      <div class="flex flex-col md:flex-row gap-4 justify-center">
+        <a
+          href="#contact"
+          class="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105"
+        >
+          Contáctanos
+        </a>
+        <a
+          href="#projects"
+          class="px-8 py-3 bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 rounded-lg text-lg font-semibold transition-all duration-300"
+        >
+          Ver Proyectos
+        </a>
       </div>
     </div>
+  </div>
 
-    <div
-      class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent z-10"
-    >
-    </div>
+  <div
+    class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent z-10"
+  >
+  </div>
 </section>
