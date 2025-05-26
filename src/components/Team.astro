@@ -1,0 +1,102 @@
+---
+import { BlockAnimation } from "./ScrollAnimation";
+
+interface TeamMember {
+  name: string;
+  role: string;
+  image: string;
+  education: string;
+  description: string;
+  linkedin?: string;
+}
+
+const teamMembers: TeamMember[] = [
+  {
+    name: "Claudia De la Barra",
+    role: "CEO & Fundadora",
+    image: "/claudia.webp", // Reemplaza con la imagen correspondiente
+    education: "Universidad Adolfo Ibáñez",
+    description:
+      "Con amplia experiencia en gestión de proyectos y liderazgo en el sector de ingeniería. Experta en optimización de procesos y desarrollo estratégico.",
+    linkedin: "https://www.linkedin.com/in/claudia-delabarra/",
+  },
+  {
+    name: "Arnaldo González",
+    role: "Modelador BIM Senior",
+    image: "/arnaldo.webp", // Reemplaza con la imagen correspondiente
+    education: "Experto en Familias Paramétricas",
+    description:
+      "Especialista en creación de familias paramétricas BIM. Más de 5 años de experiencia en modelado 3D avanzado.",
+    linkedin: "https://www.linkedin.com/in/arnaldogonzalez/",
+  },
+  {
+    name: "David Martínez",
+    role: "Coordinador BIM",
+    image: "/david.webp", // Reemplaza con la imagen correspondiente
+    education: "Especialista en Coordinación BIM",
+    description:
+      "Responsable de la coordinación entre disciplinas y detección de interferencias. Experto en optimización de flujos de trabajo BIM para proyectos de infraestructura.",
+    linkedin: "https://www.linkedin.com/in/davidmartinez/",
+  },
+];
+---
+
+<section id="team" class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <BlockAnimation client:load>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Nuestro <span class="text-blue-600">Equipo</span>
+        </h2>
+        <p class="text-xl text-gray-600">
+          Un equipo de profesionales especializados en diseño y modelado BIM
+          
+        </p>
+      </BlockAnimation>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+      {
+        teamMembers.map((member) => (
+          <BlockAnimation client:load>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all hover:shadow-xl hover:-translate-y-2 duration-300">
+              <div class="h-64 bg-blue-100 relative overflow-hidden">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  class="w-full h-full object-cover object-center"
+                />
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-blue-900/80 to-transparent p-6 text-white">
+                  <h3 class="text-xl font-semibold">{member.name}</h3>
+                  <p class="font-medium opacity-90">{member.role}</p>
+                </div>
+              </div>
+              <div class="p-6">
+                <p class="text-blue-600 font-medium mb-4">{member.education}</p>
+                <p class="text-gray-600 mb-6">{member.description}</p>
+                {member.linkedin && (
+                  <a
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors"
+                  >
+                    <svg
+                      class="w-5 h-5 mr-2"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                    Ver perfil
+                  </a>
+                )}
+              </div>
+            </div>
+          </BlockAnimation>
+        ))
+      }
+    </div>
+  </div>
+</section>

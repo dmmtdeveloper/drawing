@@ -5,23 +5,22 @@ import { BlockAnimation } from "./ScrollAnimation";
 const clients = [
   {
     name: "Esval",
-    logo: "/logo-esval-02.png",
+    logo: "/logo-esval-02.webp",
     alt: "Esval Logo",
     url: "https://www.esval.cl/",
   },
   {
     name: "Cliente 2",
-    logo: "/logo-emoj.png",
+    logo: "/logo-emoj.webp",
     alt: "emoj Logo",
     url: "https://emoj.cl/",
   },
   {
     name: "Cliente 3",
-    logo: "/logo-inwasser.svg",
+    logo: "/logo-inwasser.webp",
     alt: "Inwasser Logo",
     url: "#cliente-3",
   },
-
 ];
 ---
 
@@ -33,8 +32,8 @@ const clients = [
           Nuestros Clientes
         </h2>
         <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          Empresas que confían en nuestra experiencia para el modelado 3D de sus
-          plantas de tratamiento
+          Empresas líderes confían en nosotros para llevar sus proyectos de
+          modelado 3D al siguiente nivel.
         </p>
       </BlockAnimation>
     </div>
@@ -46,7 +45,7 @@ const clients = [
             clients.map((client) => (
               <a
                 href={client.url}
-                class="flex justify-center items-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 h-24"
+                class="flex justify-center items-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 h-24 client-container"
                 title={`Ver más sobre ${client.name}`}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -54,7 +53,7 @@ const clients = [
                 <img
                   src={client.logo}
                   alt={client.alt}
-                  class="max-h-16 max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                  class="max-h-16 max-w-full object-contain filter grayscale transition-all duration-300"
                 />
               </a>
             ))
@@ -86,3 +85,10 @@ const clients = [
     </div>
   </div>
 </section>
+
+<style>
+  .client-container:hover img {
+    filter: grayscale(0);
+    transform: scale(1.05);
+  }
+</style>
