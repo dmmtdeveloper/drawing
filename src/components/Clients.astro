@@ -1,0 +1,88 @@
+---
+import { BlockAnimation } from "./ScrollAnimation";
+
+// You can use logos from your public folder
+const clients = [
+  {
+    name: "Esval",
+    logo: "/logo-esval-02.png",
+    alt: "Esval Logo",
+    url: "https://www.esval.cl/",
+  },
+  {
+    name: "Cliente 2",
+    logo: "/logo-emoj.png",
+    alt: "emoj Logo",
+    url: "https://emoj.cl/",
+  },
+  {
+    name: "Cliente 3",
+    logo: "/logo-inwasser.svg",
+    alt: "Inwasser Logo",
+    url: "#cliente-3",
+  },
+
+];
+---
+
+<section class="py-16 bg-gradient-to-b from-white to-blue-50">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <BlockAnimation client:load>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Nuestros Clientes
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Empresas que confían en nuestra experiencia para el modelado 3D de sus
+          plantas de tratamiento
+        </p>
+      </BlockAnimation>
+    </div>
+
+    <div class="mt-12">
+      <BlockAnimation client:load>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-8">
+          {
+            clients.map((client) => (
+              <a
+                href={client.url}
+                class="flex justify-center items-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 h-24"
+                title={`Ver más sobre ${client.name}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={client.logo}
+                  alt={client.alt}
+                  class="max-h-16 max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                />
+              </a>
+            ))
+          }
+        </div>
+      </BlockAnimation>
+
+      <div class="mt-12 text-center">
+        <BlockAnimation client:load>
+          <a
+            href="#contact"
+            class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition-colors"
+          >
+            Conviértete en cliente
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 ml-2"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </a>
+        </BlockAnimation>
+      </div>
+    </div>
+  </div>
+</section>
