@@ -11,34 +11,97 @@ import ImageSlider from "./ImageSlider.astro";
   </div>
 
   <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-    <div class="max-w-4xl mx-auto text-center text-white p-4">
+    <div class="max-w-5xl mx-auto text-center text-white p-4">
+      <div class="mb-6">
+        <span
+          class="inline-block bg-blue-600/20 text-blue-300 px-4 py-2 rounded-full text-sm font-medium mb-6 backdrop-blur-sm border border-blue-400/30"
+        >
+          🚀 Líder en Modelado 3D Industrial
+        </span>
+      </div>
+
       <h1
-        class="text-6xl sm:text-6xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 opacity-95 leading-tight"
+        class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 opacity-95 leading-tight"
       >
         Ingeniería
         <span
-          class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400"
+          class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 animate-pulse"
         >
           en 3D
         </span>
       </h1>
 
-      <p class="text-xl md:text-2xl mb-8 text-gray-200 opacity-90">
-        Transformando la Ingeniería con tecnología de punta
+      <p
+        class="text-xl md:text-2xl mb-4 text-gray-200 opacity-90 max-w-3xl mx-auto leading-relaxed"
+      >
+        Transformamos plantas de tratamiento con tecnología BIM avanzada y
+        visualización 3D de vanguardia
       </p>
-      <div class="flex flex-col md:flex-row gap-4 justify-center">
+
+      <p class="text-lg mb-10 text-blue-200 opacity-80">
+        ✓ Más de 15 años de experiencia ✓ 50+ proyectos completados ✓ Tecnología
+        certificada
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
         <a
           href="#contact"
-          class="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105"
+          class="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-xl shadow-blue-500/25"
         >
-          Contáctanos
+          <span>Comenzar Proyecto</span>
+          <svg
+            class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
         </a>
+
         <a
           href="#projects"
-          class="px-8 py-3 bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 rounded-lg text-lg font-semibold transition-all duration-300"
+          class="group inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border-2 border-white/30 hover:bg-white/20 hover:border-white/50 rounded-xl text-lg font-semibold transition-all duration-300"
         >
-          Ver Proyectos
+          <svg
+            class="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-300"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+            ></path>
+          </svg>
+          <span>Ver Portfolio</span>
         </a>
+      </div>
+
+      <!-- Trust indicators -->
+      <div class="mt-16 pt-8 border-t border-white/20">
+        <p class="text-blue-200 text-sm mb-4 opacity-80">
+          Empresas que confían en nosotros:
+        </p>
+        <div
+          class="flex flex-wrap justify-center items-center gap-8 opacity-70"
+        >
+          <div class="text-white/60 font-medium">ESVAL</div>
+          <div class="text-white/60 font-medium">Minera Los Pelambres</div>
+          <div class="text-white/60 font-medium">Aguas Andinas</div>
+          <div class="text-white/60 font-medium">INWASSER</div>
+        </div>
       </div>
     </div>
   </div>
@@ -46,5 +109,28 @@ import ImageSlider from "./ImageSlider.astro";
   <div
     class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent z-10"
   >
+  </div>
+
+  <!-- Floating elements -->
+  <div
+    class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30 animate-bounce"
+  >
+    <a
+      href="#servicios"
+      class="text-white/60 hover:text-white transition-colors duration-300"
+    >
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </a>
   </div>
 </section>

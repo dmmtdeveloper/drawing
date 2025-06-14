@@ -24,73 +24,6 @@ const { title } = Astro.props;
     />
   </head>
   <body class="bg-white text-gray-900">
-    <nav class="fixed w-full z-50 transition-all duration-300">
-      <div class="container mx-auto px-4">
-        <div class="flex items-center justify-between h-20">
-          <a
-            href="/"
-            class="text-xl font-bold text-white flex items-center gap-3 transition-colors duration-300"
-          >
-            WaterModel 3D
-          </a>
-          <div class="hidden md:flex space-x-8">
-            <div class="relative group">
-              <a
-                href="#solutions"
-                class="text-white hover:text-blue-400 transition-colors py-8"
-              >
-                Soluciones
-              </a>
-              <div
-                class="absolute hidden group-hover:block w-48 bg-white shadow-lg rounded-lg mt-2"
-              >
-                <a
-                  href="#treatment-plants"
-                  class="block px-4 py-2 hover:bg-gray-50"
-                  >Plantas de Tratamiento</a
-                >
-                <a
-                  href="#water-systems"
-                  class="block px-4 py-2 hover:bg-gray-50">Sistemas de Agua</a
-                >
-                <a
-                  href="#infrastructure"
-                  class="block px-4 py-2 hover:bg-gray-50">Infraestructura</a
-                >
-              </div>
-            </div>
-            <a
-              href="#services"
-              class="text-gray-600 hover:text-blue-600 transition-colors"
-              >Servicios</a
-            >
-            <a
-              href="#projects"
-              class="text-gray-600 hover:text-blue-600 transition-colors"
-              >Proyectos</a
-            >
-            <a
-              href="#about"
-              class="text-gray-600 hover:text-blue-600 transition-colors"
-              >Nosotros</a
-            >
-            <a
-              href="#contact"
-              class="text-gray-600 hover:text-blue-600 transition-colors"
-              >Contacto</a
-            >
-          </div>
-          <div class="flex items-center gap-4">
-            <a
-              href="#contact"
-              class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors font-medium"
-            >
-              Solicitar Demo
-            </a>
-          </div>
-        </div>
-      </div>
-    </nav>
     <slot />
   </body>
 </html>
@@ -101,40 +34,10 @@ const { title } = Astro.props;
     margin: 0;
     width: 100%;
     height: 100%;
+    scroll-behavior: smooth;
   }
 
-  nav.scrolled {
-    @apply bg-white/90 backdrop-blur-sm;
+  * {
+    box-sizing: border-box;
   }
 </style>
-
-<script>
-  // Detectar el scroll y añadir/remover clases al nav
-  const nav = document.querySelector("nav");
-  const navLinks = document.querySelectorAll("nav a:not(.bg-blue-600)");
-  const navLogo = document.querySelector("nav a:first-child");
-
-  const handleScroll = () => {
-    if (window.scrollY > 50) {
-      nav?.classList.add("scrolled");
-      navLinks.forEach((link) => {
-        link.classList.remove("text-white", "hover:text-blue-400");
-        link.classList.add("text-gray-600", "hover:text-blue-600");
-      });
-      navLogo?.classList.remove("text-white");
-      navLogo?.classList.add("text-gray-900");
-    } else {
-      nav?.classList.remove("scrolled");
-      navLinks.forEach((link) => {
-        link.classList.remove("text-gray-600", "hover:text-blue-600");
-        link.classList.add("text-white", "hover:text-blue-400");
-      });
-      navLogo?.classList.remove("text-gray-900");
-      navLogo?.classList.add("text-white");
-    }
-  };
-
-  window.addEventListener("scroll", handleScroll);
-  // Verificar el estado inicial
-  handleScroll();
-</script>

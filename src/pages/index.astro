@@ -1,7 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
 import Hero from "../components/Hero.astro";
+import Stats from "../components/Stats.astro";
 import Features from "../components/Features.astro";
+import Services from "../components/Services.astro";
+import Testimonials from "../components/Testimonials.astro";
+import CTA from "../components/CTA.astro";
 import ContactForm from "../components/ContactForm.astro";
 import Footer from "../components/Footer.astro";
 import Clients from "../components/Clients.astro";
@@ -10,11 +15,17 @@ import { BlockAnimation } from "../components/ScrollAnimation";
 ---
 
 <Layout title="WaterModel 3D - Modelado 3D de Plantas de Tratamiento">
+  <Header />
   <main>
-    <Hero />
+    <section id="inicio">
+      <Hero />
+    </section>
+    <Stats />
     <Features />
+    <section id="servicios">
+      <Services />
+    </section>
     <Clients />
-
     <!-- Projects Section -->
     <section id="projects" class="py-20 bg-gradient-to-b from-white to-blue-50">
       <div class="container mx-auto px-4">
@@ -29,69 +40,138 @@ import { BlockAnimation } from "../components/ScrollAnimation";
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="group relative overflow-hidden rounded-xl shadow-lg">
+          <div
+            class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
+          >
             <img
-              src="/images/project1.webp"
+              src="/pampaconcordia.webp"
               alt="Planta de tratamiento modelo 3D"
               class="w-full aspect-video object-cover transform group-hover:scale-105 transition-transform duration-300"
             />
             <div
-              class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end"
+              class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end"
             >
               <div class="p-6">
                 <h3 class="text-xl font-semibold text-white mb-2">
-                  Planta de Tratamiento Municipal
+                  Planta Pampa Concordia
                 </h3>
                 <p class="text-gray-200">
-                  Modelado BIM completo y simulación de procesos
+                  Modelado BIM completo y simulación de procesos industriales
                 </p>
+                <div class="mt-3 flex items-center text-blue-300">
+                  <svg
+                    class="w-4 h-4 mr-1"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                    <path
+                      fill-rule="evenodd"
+                      d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <span class="text-sm">Ver detalles</span>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="group relative overflow-hidden rounded-xl shadow-lg">
+          <div
+            class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
+          >
             <img
-              src="/images/project2.webp"
+              src="/PTAS_pucobre.webp"
               alt="Sistema de tuberías 3D"
               class="w-full aspect-video object-cover transform group-hover:scale-105 transition-transform duration-300"
             />
             <div
-              class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end"
+              class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end"
             >
               <div class="p-6">
                 <h3 class="text-xl font-semibold text-white mb-2">
-                  Sistema de Tuberías Industrial
+                  PTAS Pucobre
                 </h3>
                 <p class="text-gray-200">
-                  Detección de interferencias y optimización
+                  Sistema de tratamiento de aguas mineras con tecnología
+                  avanzada
                 </p>
+                <div class="mt-3 flex items-center text-blue-300">
+                  <svg
+                    class="w-4 h-4 mr-1"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                    <path
+                      fill-rule="evenodd"
+                      d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <span class="text-sm">Ver detalles</span>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="group relative overflow-hidden rounded-xl shadow-lg">
+          <div
+            class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
+          >
             <img
-              src="/images/project3.webp"
+              src="/neutralizacion.webp"
               alt="Visualización 3D de planta"
               class="w-full aspect-video object-cover transform group-hover:scale-105 transition-transform duration-300"
             />
             <div
-              class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end"
+              class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end"
             >
               <div class="p-6">
                 <h3 class="text-xl font-semibold text-white mb-2">
-                  Centro de Control Automatizado
+                  Sistema de Neutralización
                 </h3>
                 <p class="text-gray-200">
-                  Visualización y documentación técnica
+                  Diseño y visualización de sistemas de neutralización química
                 </p>
+                <div class="mt-3 flex items-center text-blue-300">
+                  <svg
+                    class="w-4 h-4 mr-1"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                    <path
+                      fill-rule="evenodd"
+                      d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <span class="text-sm">Ver detalles</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
+        <div class="text-center mt-12">
+          <a
+            href="#contact"
+            class="inline-flex items-center px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300 font-semibold"
+          >
+            Ver Todos los Proyectos
+            <svg
+              class="w-5 h-5 ml-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
+        </div>
       </div>
     </section>
-
     <!-- Process Section -->
     <section class="py-20 bg-blue-50">
       <div class="container mx-auto px-4">
@@ -105,11 +185,25 @@ import { BlockAnimation } from "../components/ScrollAnimation";
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div class="text-center">
+          <div
+            class="text-center group hover:transform hover:scale-105 transition-all duration-300"
+          >
             <div
-              class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-blue-200"
+              class="w-20 h-20 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-blue-200 group-hover:shadow-xl group-hover:shadow-blue-300"
             >
-              <span class="text-2xl">1</span>
+              <svg
+                class="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                ></path>
+              </svg>
             </div>
             <h3 class="text-xl font-semibold text-blue-600 mb-3">
               Análisis Inicial
@@ -119,13 +213,27 @@ import { BlockAnimation } from "../components/ScrollAnimation";
             </p>
           </div>
 
-          <div class="text-center">
+          <div
+            class="text-center group hover:transform hover:scale-105 transition-all duration-300"
+          >
             <div
-              class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6"
+              class="w-20 h-20 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-green-200 group-hover:shadow-xl group-hover:shadow-green-300"
             >
-              <span class="text-2xl">2</span>
+              <svg
+                class="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                ></path>
+              </svg>
             </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+            <h3 class="text-xl font-semibold text-green-600 mb-3">
               Modelado 3D
             </h3>
             <p class="text-gray-600">
@@ -133,13 +241,26 @@ import { BlockAnimation } from "../components/ScrollAnimation";
             </p>
           </div>
 
-          <div class="text-center">
+          <div
+            class="text-center group hover:transform hover:scale-105 transition-all duration-300"
+          >
             <div
-              class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6"
+              class="w-20 h-20 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-purple-200 group-hover:shadow-xl group-hover:shadow-purple-300"
             >
-              <span class="text-2xl">3</span>
+              <svg
+                class="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
             </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+            <h3 class="text-xl font-semibold text-purple-600 mb-3">
               Optimización
             </h3>
             <p class="text-gray-600">
@@ -147,13 +268,26 @@ import { BlockAnimation } from "../components/ScrollAnimation";
             </p>
           </div>
 
-          <div class="text-center">
+          <div
+            class="text-center group hover:transform hover:scale-105 transition-all duration-300"
+          >
             <div
-              class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6"
+              class="w-20 h-20 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-orange-200 group-hover:shadow-xl group-hover:shadow-orange-300"
             >
-              <span class="text-2xl">4</span>
+              <svg
+                class="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"></path>
+              </svg>
             </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">Entrega</h3>
+            <h3 class="text-xl font-semibold text-orange-600 mb-3">Entrega</h3>
             <p class="text-gray-600">
               Documentación completa y soporte técnico
             </p>
@@ -162,8 +296,11 @@ import { BlockAnimation } from "../components/ScrollAnimation";
       </div>
     </section>
 
+    <Testimonials />
+    <CTA />
+
     <!-- Contact Section -->
-    <!-- <section id="contact" class="py-20 bg-white">
+    <section id="contact" class="py-20 bg-white">
       <div class="container mx-auto px-4">
         <div class="text-center max-w-3xl mx-auto mb-16">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -176,11 +313,12 @@ import { BlockAnimation } from "../components/ScrollAnimation";
         </div>
         <ContactForm />
       </div>
-    </section> -->
+    </section>
 
     <!-- Team Section -->
-    <Team />
-
+    <section id="team">
+      <Team />
+    </section>
     <!-- FAQ Section -->
     <section class="py-20 bg-gradient-to-b from-blue-50 to-white">
       <div class="container mx-auto px-4">
@@ -193,38 +331,159 @@ import { BlockAnimation } from "../components/ScrollAnimation";
           </p>
         </div>
 
-        <div class="max-w-3xl mx-auto divide-y divide-gray-200">
-          <div
-            class="py-6 hover:bg-blue-50 rounded-lg transition-colors duration-300 px-4"
-          >
-            <h3 class="text-lg font-semibold text-blue-600">
-              ¿Qué software utilizan para el modelado 3D?
-            </h3>
-            <p class="mt-2 text-gray-600">
-              Utilizamos software BIM de última generación, incluyendo Revit,
-              AutoCAD Plant 3D y otros programas especializados para garantizar
-              la máxima precisión y compatibilidad.
-            </p>
-          </div>
-          <div class="py-6">
-            <h3 class="text-lg font-semibold text-gray-900">
-              ¿Cuánto tiempo toma completar un proyecto?
-            </h3>
-            <p class="mt-2 text-gray-600">
-              El tiempo varía según la complejidad del proyecto. Típicamente, un
-              proyecto mediano puede tomar entre 4-8 semanas desde el inicio
-              hasta la entrega final.
-            </p>
-          </div>
-          <div class="py-6">
-            <h3 class="text-lg font-semibold text-gray-900">
-              ¿Ofrecen soporte post-entrega?
-            </h3>
-            <p class="mt-2 text-gray-600">
-              Sí, proporcionamos soporte técnico completo después de la entrega,
-              incluyendo actualizaciones del modelo y asistencia en la
-              implementación.
-            </p>
+        <div class="max-w-4xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="space-y-6">
+              <div
+                class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+              >
+                <h3
+                  class="text-lg font-semibold text-blue-600 mb-3 flex items-center"
+                >
+                  <svg
+                    class="w-5 h-5 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  ¿Qué software utilizan para el modelado 3D?
+                </h3>
+                <p class="text-gray-600 leading-relaxed">
+                  Utilizamos software BIM de última generación, incluyendo
+                  Revit, AutoCAD Plant 3D, Bentley MicroStation y otros
+                  programas especializados para garantizar la máxima precisión y
+                  compatibilidad.
+                </p>
+              </div>
+
+              <div
+                class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+              >
+                <h3
+                  class="text-lg font-semibold text-blue-600 mb-3 flex items-center"
+                >
+                  <svg
+                    class="w-5 h-5 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  ¿Cuánto tiempo toma completar un proyecto?
+                </h3>
+                <p class="text-gray-600 leading-relaxed">
+                  El tiempo varía según la complejidad del proyecto.
+                  Típicamente, un proyecto mediano puede tomar entre 4-8 semanas
+                  desde el inicio hasta la entrega final, incluyendo revisiones
+                  y ajustes.
+                </p>
+              </div>
+
+              <div
+                class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+              >
+                <h3
+                  class="text-lg font-semibold text-blue-600 mb-3 flex items-center"
+                >
+                  <svg
+                    class="w-5 h-5 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    ></path>
+                  </svg>
+                  ¿Ofrecen soporte post-entrega?
+                </h3>
+                <p class="text-gray-600 leading-relaxed">
+                  Sí, proporcionamos soporte técnico completo después de la
+                  entrega, incluyendo actualizaciones del modelo, capacitación
+                  del personal y asistencia en la implementación.
+                </p>
+              </div>
+            </div>
+
+            <div class="space-y-6">
+              <div
+                class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+              >
+                <h3
+                  class="text-lg font-semibold text-blue-600 mb-3 flex items-center"
+                >
+                  <svg
+                    class="w-5 h-5 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"
+                    ></path>
+                  </svg>
+                  ¿Cuáles son sus tarifas de servicio?
+                </h3>
+                <p class="text-gray-600 leading-relaxed">
+                  Nuestras tarifas varían según la complejidad y alcance del
+                  proyecto. Ofrecemos cotizaciones personalizadas y planes de
+                  pago flexibles para adaptarnos a su presupuesto.
+                </p>
+              </div>
+
+              <div
+                class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+              >
+                <h3
+                  class="text-lg font-semibold text-blue-600 mb-3 flex items-center"
+                >
+                  <svg
+                    class="w-5 h-5 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  ¿Trabajan con formatos estándar de la industria?
+                </h3>
+                <p class="text-gray-600 leading-relaxed">
+                  Absolutamente. Trabajamos con formatos estándar como IFC, DWG,
+                  RVT, y muchos otros. Garantizamos la compatibilidad con los
+                  sistemas existentes de nuestros clientes.
+                </p>
+              </div>
+
+              <div
+                class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+              >
+                <h3
+                  class="text-lg font-semibold text-blue-600 mb-3 flex items-center"
+                >
+                  <svg
+                    class="w-5 h-5 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+                    ></path>
+                  </svg>
+                  ¿Ofrecen consultoría técnica especializada?
+                </h3>
+                <p class="text-gray-600 leading-relaxed">
+                  Sí, nuestro equipo de ingenieros especializados ofrece
+                  consultoría técnica en optimización de procesos, análisis de
+                  eficiencia y mejores prácticas en plantas de tratamiento.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
