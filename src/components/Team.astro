@@ -42,7 +42,7 @@ const teamMembers: TeamMember[] = [
 ---
 
 <section id="team" class="py-20 bg-white">
-  <div class="container mx-auto px-4">
+  <div class="container mx-auto px-4 max-w-5xl">
     <div class="text-center max-w-3xl mx-auto mb-16">
       <BlockAnimation client:load>
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -54,7 +54,7 @@ const teamMembers: TeamMember[] = [
       </BlockAnimation>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-5xl mx-auto">
       {
         teamMembers.map((member) => (
           <BlockAnimation client:load>
